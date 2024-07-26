@@ -619,8 +619,11 @@ html{
         top: 200px;
         left: 170px;
     }
+     .header{
+        margin: 180px 25px;
+    }
     .bg2{
-        width: 70%;
+        width: 65%;
     }
     .head1{
         top: -14%;
