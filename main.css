@@ -619,12 +619,17 @@ html{
         top: 200px;
         left: 170px;
     }
-     .header{
+    
+    .header{
         margin: 180px 25px;
     }
     .bg2{
         width: 65%;
     }
+
+    .bg1{
+        top: 580px;
+    } 
     .head1{
         top: -14%;
     }
@@ -632,7 +637,7 @@ html{
         top: -7%;
     }
     .bg8{
-        top: 2790px;
+        top: 2780px;
     }
     .footer{
         top: 3680px;
