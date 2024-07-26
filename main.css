@@ -519,7 +519,7 @@ html{
 
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 395px) {
     #pre{
         width: 20%;
         top:400px;
@@ -531,16 +531,16 @@ html{
         left: 110px;
     }
     .header{
-        margin: 140px 25px;
+        margin: 170px 25px;
     }
     .profile{
-        width: 300px;
+        width: 350px;
     }
     .bg1 {
-        top: 480px; 
+        top: 500px; 
     }
     .bg2{
-        width: 60%;
+        width: 65%;
     }
     .bg4{
         top: 1350px;
@@ -619,11 +619,8 @@ html{
         top: 200px;
         left: 170px;
     }
-    .header{
-        margin: 180px 25px;
-    }
     .bg2{
-        width: 65%;
+        width: 70%;
     }
     .head1{
         top: -14%;
@@ -651,10 +648,10 @@ html{
         left: 150px;
     }
     .bg2{
-        width: 60%;
+        width: 65%;
     }
     .header{
-        margin: 130px 25px;
+        margin: 140px 25px;
     }
     .profile{
         width: 320px;
@@ -669,7 +666,7 @@ html{
         top: -5%;
     }
     .bg1 {
-        top: 470px; 
+        top: 500px; 
     }
     .bg2{
         width: 65%;
