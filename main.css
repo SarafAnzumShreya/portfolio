@@ -29,7 +29,7 @@ html{
     }
 
 
-    #preloader{
+    #preloader {
         position: fixed;
         z-index:10;
         top:-50%;
@@ -37,28 +37,22 @@ html{
         height: 200%;
         background-color: rgb(38, 38, 38);
         background-size: 15%;
+        overflow: hidden; /* Prevent overflow */
     }
     
-    #pre1{
+    #pre{
         width: 10%;
         position: fixed;
         z-index:11;
-        top:300px;
-        left: 600px;
+        top:320px;
+        left: 550px;
     }
     
-    #pre2{
-        width: 10%;
-        position: fixed;
-        z-index:11;
-        top:299px;
-        left: 504px;
-    }
     #ball{
         width: 10%;
         position: fixed;
         z-index:11;
-        top: 80px;
+        top: 110px;
         left: 550px;
         animation: b;
         animation: bounce 0.7s; 
@@ -298,20 +292,12 @@ html{
         background-size: 85%;
     }
     
-    #pre1{
+    #pre{
         width: 20%;
         position: fixed;
         z-index:11;
-        top:350px;
-        left: 180px;
-    }
-    
-    #pre2{
-        width: 20%;
-        position: fixed;
-        z-index:11;
-        top:350px;
-        left: 123px;
+        top:320px;
+        left: 150px;
     }
     #ball{
         width: 20%;
@@ -533,7 +519,17 @@ html{
 
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 395px) {
+    #pre{
+        width: 20%;
+        top:400px;
+        left: 110px;
+    }
+    #ball{
+        width: 20%;
+        top: 200px;
+        left: 110px;
+    }
     .header{
         margin: 170px 25px;
     }
@@ -564,6 +560,16 @@ html{
 }
 
 @media all and (max-width: 500px) {
+    #pre{
+        width: 20%;
+        top:400px;
+        left: 170px;
+    }
+    #ball{
+        width: 20%;
+        top: 200px;
+        left: 170px;
+    }
     .header{
         margin: 200px 25px;
     }
@@ -603,6 +609,16 @@ html{
 }
 
 @media  all and (max-width: 415px) {
+    #pre{
+        width: 20%;
+        top:400px;
+        left: 170px;
+    }
+    #ball{
+        width: 20%;
+        top: 200px;
+        left: 170px;
+    }
     .bg2{
         width: 70%;
     }
@@ -621,6 +637,16 @@ html{
 }
 
 @media  all and (max-width: 365px) {
+    #pre{
+        width: 20%;
+        top:350px;
+        left: 150px;
+    }
+    #ball{
+        width: 20%;
+        top: 150px;
+        left: 150px;
+    }
     .bg2{
         width: 65%;
     }
