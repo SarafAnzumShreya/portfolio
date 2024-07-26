@@ -610,12 +610,12 @@ html{
 
 @media  all and (max-width: 415px) {
     #pre{
-        width: 5%;
+        width: 20%;
         top:400px;
         left: 170px;
     }
     #ball{
-        width: 5%;
+        width: 20%;
         top: 200px;
         left: 170px;
     }
