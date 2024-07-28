@@ -519,45 +519,6 @@ html{
 
 }
 
-@media all and (max-width: 395px) {
-    #pre{
-        width: 20%;
-        top:400px;
-        left: 110px;
-    }
-    #ball{
-        width: 20%;
-        top: 200px;
-        left: 110px;
-    }
-    .header{
-        margin: 170px 25px;
-    }
-    .profile{
-        width: 350px;
-    }
-    .bg1 {
-        top: 500px; 
-    }
-    .bg2{
-        width: 65%;
-    }
-    .bg4{
-        top: 1350px;
-    }
-    .bg7{
-        top: 1850px;
-    }
-    .bg8{
-        top: 2800px;
-    }
-    .bg9{
-        top: 3165px;
-    }
-    .footer{
-        top: 3690px;
-    }
-}
 
 @media all and (max-width: 500px) {
     #pre{
@@ -641,6 +602,46 @@ html{
     }
     .footer{
         top: 3680px;
+    }
+}
+
+@media all and (max-width: 395px) {
+    #pre{
+        width: 20%;
+        top:400px;
+        left: 110px;
+    }
+    #ball{
+        width: 20%;
+        top: 200px;
+        left: 110px;
+    }
+    .header{
+        margin: 170px 25px;
+    }
+    .profile{
+        width: 350px;
+    }
+    .bg1 {
+        top: 500px; 
+    }
+    .bg2{
+        width: 65%;
+    }
+    .bg4{
+        top: 1350px;
+    }
+    .bg7{
+        top: 1850px;
+    }
+    .bg8{
+        top: 2800px;
+    }
+    .bg9{
+        top: 3165px;
+    }
+    .footer{
+        top: 3690px;
     }
 }
 
