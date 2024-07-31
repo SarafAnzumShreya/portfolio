@@ -11,21 +11,22 @@ html{
     --Blue: rgb(51, 122, 235);
     --Red: rgb(255, 26, 64);
     --Reda: rgba(191, 191, 191, 0.15);
+    --RedaL: rgba(178, 178, 178, 0.447);
     overflow-x: hidden;
 }
 
-@media all and (max-width: 2000px) {
+@media all and (max-width: 1900px) {
     body{
         width: 100%;
         background-color: rgb(38, 38, 38);
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: rgb(204, 204, 204);
         font-size: 14px;
-
         background-image: url("pictures/background.webp");
         background-attachment:fixed;
         background-size: 35%;
         overflow-x: hidden;
+        transition: background-image .5s ease-in-out;
     }
 
     .navbar{
@@ -43,7 +44,7 @@ html{
     }
     #preloader {
         position: fixed;
-        z-index:15;
+        z-index:20;
         top:-50%;
         width: 200%;
         height: 200%;
@@ -55,7 +56,7 @@ html{
     #pre{
         width: 10%;
         position: fixed;
-        z-index:15;
+        z-index:20;
         top:320px;
         left: 550px;
     }
@@ -63,7 +64,7 @@ html{
     #ball{
         width: 10%;
         position: fixed;
-        z-index:16;
+        z-index:21;
         top: 110px;
         left: 550px;
         animation: b;
@@ -92,7 +93,7 @@ html{
         color: rgb(255, 201, 192);
     }
     h2{
-        color: rgb(171, 200, 255);
+        color: rgb(95, 122, 173);
         text-align: left;
     }
     #mainBody{
@@ -175,7 +176,7 @@ html{
         right: 0;
         top: 30px;
         filter: drop-shadow(-5px -5px 0px var(--Red));
-        z-index: 4;
+        z-index: 4; 
     }
     .bg2{
         width: 26%;
@@ -429,19 +430,100 @@ html{
 
 
 
+
+    #modeToggleLight {
+        width: 70px;
+        height: 30px;
+        top: 50px;
+        left: 1080px;
+        position: absolute;
+        z-index: 8;
+        background: #d8d8d8;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    #modeToggleDark {
+        width: 70px;
+        height: 30px;
+        top: 50px;
+        left: 1080px;
+        position: absolute;
+        z-index: 8;
+        background: #444444;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    @keyframes circleDark {
+        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 1082px;}
+        10%  {background: linear-gradient(180deg, #777, #242424)}
+        100%  {background: linear-gradient(180deg, #777, #242424); left: 1122px}
+    }
+    
+    @keyframes circleLight{
+        0%  {background: linear-gradient(180deg, #777, #242424); left: 1122px}
+        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
+        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 1082px;}
+    }
+    
+    
+    #circle{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 52.5px;
+        left:1122px;
+        cursor: pointer;
+        z-index: 9;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(180deg, #777, #242424);
+    }
+    
+    
+    
+    #sunLight, #sunDark, #moonLight, #moonDark {
+        position: absolute;
+        width: 18px;
+        top: 55px;
+        z-index: 10;
+        transition: 1s;
+        cursor: pointer;
+    }
+    
+    #sunLight {
+        left: 1085.5px;
+    }
+    
+    #sunDark {
+        left: 1085.5px;
+    }
+    
+    #moonLight {
+        left: 1126px;
+    }
+    
+    #moonDark {
+        left: 1126px;
+    }
+    
+
+
+    
+
+
 }
 
 
 @media all and (max-width: 800px) {
     body{
         width: 100%;
-        background-color: rgb(38, 38, 38);
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: rgb(204, 204, 204);
         font-size: 12px;
-
-        background-image: url("pictures/background.webp");
-        background-attachment:fixed;
         background-size: 85%;
     }
     #preloader{
@@ -494,7 +576,6 @@ html{
         margin: 35px 35px;
         padding: 8px;
         display: block;
-        background-color: var(--Reda);
         text-align: center;
     }
     .navbar{
@@ -984,4 +1065,3 @@ html{
         top: 4300px;
     }
 }
-
