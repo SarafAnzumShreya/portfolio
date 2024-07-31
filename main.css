@@ -15,13 +15,13 @@ html{
     overflow-x: hidden;
 }
 
-@media all and (max-width: 1900px) {
+@media all and (max-width: 1440px) {
     body{
         width: 100%;
         background-color: rgb(38, 38, 38);
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: rgb(204, 204, 204);
-        font-size: 14px;
+        font-size: 16px;
         background-image: url("pictures/background.webp");
         background-attachment:fixed;
         background-size: 35%;
@@ -31,7 +31,7 @@ html{
 
     .navbar{
         position: absolute; 
-        top: 5700px; 
+        top: 6450px; 
         left:250px;
         text-align: center;
     }
@@ -58,7 +58,7 @@ html{
         position: fixed;
         z-index:20;
         top:320px;
-        left: 550px;
+        left: 650px;
     }
     
     #ball{
@@ -66,7 +66,508 @@ html{
         position: fixed;
         z-index:21;
         top: 110px;
-        left: 550px;
+        left: 650px;
+        animation: b;
+        animation: bounce 0.7s; 
+        animation-direction: alternate; 
+        animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+        animation-iteration-count: infinite; 
+    }
+    
+    @keyframes bounce { 
+        from { 
+            transform: translate3d(0, 0, 0); 
+        } 
+        to { 
+            transform: translate3d(0, 200px, 0); 
+        } 
+    } 
+    
+    ul,li{
+        display: inline-block;
+        margin: 2%;
+    }
+    
+
+    b, h1{
+        color: rgb(255, 201, 192);
+    }
+    h2{
+        color: rgb(95, 122, 173);
+        text-align: left;
+    }
+    #mainBody{
+        border: 1px solid var(--Blue);
+        position: relative;
+        margin: 100px 200px;
+        padding: 50px;
+        display: block;
+        background-color: var(--Reda);
+        text-align: center;
+    }
+    .skills button{
+        background-color: rgb(82, 82, 82);
+        padding: 0.3rem 1.2rem;
+        margin-top: 0.3rem;
+        border: none;
+        border-radius: 45%;
+        color: rgb(204, 204, 204);
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .icons{
+        display: block;
+        margin-top: -10px; 
+        font-size: 1.3rem;
+        position: absolute;
+        z-index: 4;
+    }
+    span{
+        color: var(--Red);
+        margin-right: 14px;
+    }
+    p{
+        text-align: justify;
+    }
+    .name{
+        display: inline-block; 
+        justify-items: center;
+        margin-bottom: 35px;
+        margin-right: 30px;
+    }
+    .header{
+        display: flex;
+        margin: 150px 250px 120px 250px;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .profile{
+        width: 450px;
+        margin-left: 30px;
+    }
+    .item{
+        width: 30%;
+        position: absolute;
+        top: -70px;
+        right: 40px;
+        z-index: 5;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .cover{
+        z-index: 3; 
+        width: 60%;  
+        border: 3px solid white;
+    }
+    .avatar{
+        width: 6%;
+        position: absolute; 
+        z-index: 3; 
+        left: 590px; 
+        top:1030px; 
+        border: 3px solid white; 
+        border-radius: 50%;
+    }
+    .shop{
+        z-index: 3; 
+        width: 60%;  
+    }
+
+    .bg1{
+        width: 20%;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        filter: drop-shadow(-5px -5px 0px var(--Red));
+        z-index: 4; 
+    }
+    .bg2{
+        width: 26%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Blue));
+        z-index: 4;
+
+    }
+    .bg3{
+        width: 3%;
+        position: absolute;
+        top: 400px;
+        left:135px;
+        filter: drop-shadow(-3px -3px 0px var(--Red));
+        z-index: 5;
+    }
+    .bg4{
+        width: 14%;
+        position: absolute;
+        z-index: 4;
+        top: 1050px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Red));
+    }
+    .bg5{
+        width: 13%;
+        position: absolute;
+        z-index: 4;
+        top: 2300px;
+        left: 0px;
+        filter: drop-shadow(4px 0px 0px var(--Red));
+    }
+    .bg6{
+        width: 13%;
+        position: absolute;
+        z-index: 4;
+        top: 2320px;
+        left: 0px;
+        filter: drop-shadow(3px -3px 0px var(--Blue));
+    }
+    .bg7{
+        width: 18%;
+        position: absolute;
+        z-index: 4;
+        top: 1600px;
+        right: 0;
+        filter: drop-shadow(-5px -5px 0px var(--Blue));
+    }
+    .bg8{
+        width: 16%;
+        position: absolute;
+        z-index: 4;
+        top: 2700px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Blue));
+    }
+    .bg9{
+        width: 12%;
+        position: absolute;
+        z-index: 4;
+        top: 4930px;
+        right: 0;
+        filter: drop-shadow(-4px -4px 0px var(--Red));
+    }
+    .bg12{
+        width: 28%;
+        position: absolute;
+        z-index: 4;
+        top: 4000px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Blue));
+    }
+    .bg11{
+        width: 12%;
+        position: absolute;
+        z-index: 4;
+        top: 4670px;
+        right: 0;
+        filter: drop-shadow(-5px -5px 0px var(--Bluw));
+    }
+    
+    .bg10{
+        width: 10%;
+        position: absolute;
+        z-index: 4;
+        top: 3670px;
+        right: 0;
+        filter: drop-shadow(-4px -4px 0px var(--Red));
+    }
+    .head1{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -14%;
+        transform: translateX(-50%); 
+        left: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .head2{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -3%;
+        transform: translateX(50%); 
+        right: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .head3{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -9.5%;
+        transform: translateX(-50%); 
+        left: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+
+    .head4{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -20%;
+        transform: translateX(50%); 
+        right: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+
+    .head5{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -9.5%;
+        transform: translateX(-50%); 
+        left: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    
+    .foot1{
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+        filter: drop-shadow(-5px -5px 0px var(--Red));
+    }
+    .foot2{
+        width: 100%;
+        position: absolute;
+        z-index: -3;
+        filter: drop-shadow(-5px -5px 0px var(--Blue));
+    }
+    .footer{
+        position: absolute; 
+        top: 6550px; 
+        left: 600px;
+        text-align: center;
+    }
+    footer{
+        margin-top: -100px;
+    }
+
+
+
+
+
+    .container{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        height: 500px;
+    }
+    #gallary{
+        display: inline-flex;
+        position: absolute;
+        width: 70%;
+        z-index: 11;
+    }
+    
+    #slide{
+        display: none;
+    }
+    
+    .prepreactive, .proproactive{
+        opacity: 0;
+        position: absolute;
+        z-index: 10;
+        left: 215px; 
+        right: 100px;
+        width: 20%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+    }
+    
+    .preactive{
+        position: absolute;
+        z-index: 11;
+        top: 260px;
+        left: 200px; 
+        width: 35%;
+        opacity: 35%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);   
+        transform: translateX(-50%); 
+    }
+    
+    .active{
+        position: absolute;
+        z-index: 12;
+        left: 260px; 
+        right: 100px;
+        width: 50%;
+        box-shadow: 2px 2px 40px black;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+    }
+    .proactive{
+        position: absolute;
+        z-index: 11;
+        top: 260px;
+        right: 200px;
+        width: 35%;
+        opacity: 35%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+        transform: translateX(50%);
+    }
+    
+    
+    .control_right{
+        position: absolute;
+        z-index: 12;
+        top: 430px;
+        right: -60px;
+        width: 55%;
+        background-color: none;
+    }
+    .control_i{
+        font-size: 30px;
+        opacity: .4;
+        cursor: pointer;
+    }
+    .control_i:hover, .control_i:hover{
+        opacity: .8;
+    }
+    
+    .control_left{
+        position: absolute;
+        z-index: 12;
+        top: 430px;
+        left: -60px;
+        width: 55%;
+        background-color: none;
+    }
+
+
+
+
+
+    #modeToggleLight {
+        width: 70px;
+        height: 30px;
+        top: 50px;
+        left: 1180px;
+        position: absolute;
+        z-index: 8;
+        background: #d8d8d8;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    #modeToggleDark {
+        width: 70px;
+        height: 30px;
+        top: 50px;
+        left: 1180px;
+        position: absolute;
+        z-index: 8;
+        background: #444444;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    @keyframes circleDark {
+        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 1182px;}
+        10%  {background: linear-gradient(180deg, #777, #242424)}
+        100%  {background: linear-gradient(180deg, #777, #242424); left: 1222px}
+    }
+    
+    @keyframes circleLight{
+        0%  {background: linear-gradient(180deg, #777, #242424); left: 1222px}
+        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
+        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 1182px;}
+    }
+    
+    
+    #circle{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 52.5px;
+        left:1222px;
+        cursor: pointer;
+        z-index: 9;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(180deg, #777, #242424);
+    }
+    
+    
+    
+    #sunLight, #sunDark, #moonLight, #moonDark {
+        position: absolute;
+        width: 18px;
+        top: 55px;
+        z-index: 10;
+        transition: 1s;
+        cursor: pointer;
+    }
+    
+    #sunLight {
+        left: 1185.5px;
+    }
+    
+    #sunDark {
+        left: 1185.5px;
+    }
+    
+    #moonLight {
+        left: 1226px;
+    }
+    
+    #moonDark {
+        left: 1226px;
+    }
+    
+}
+
+@media all and (max-width: 1300px) {
+    body{
+        width: 100%;
+        background-color: rgb(38, 38, 38);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(204, 204, 204);
+        font-size: 14px;
+        background-image: url("pictures/background.webp");
+        background-attachment:fixed;
+        background-size: 35%;
+        overflow-x: hidden;
+        transition: background-image .5s ease-in-out;
+    }
+
+    .navbar{
+        position: absolute; 
+        top: 5750px; 
+        left:250px;
+        text-align: center;
+    }
+    .navbar a{
+        margin: 50px;        
+        color:var(--Red);
+    }
+    .navbar a:hover{
+        cursor: pointer;
+    }
+    #preloader {
+        position: fixed;
+        z-index:20;
+        top:-50%;
+        width: 200%;
+        height: 200%;
+        background-color: rgb(38, 38, 38);
+        background-size: 15%;
+        overflow: hidden; /* Prevent overflow */
+    }
+    
+    #pre{
+        width: 10%;
+        position: fixed;
+        z-index:20;
+        top:320px;
+        left: 580px;
+    }
+    
+    #ball{
+        width: 10%;
+        position: fixed;
+        z-index:21;
+        top: 110px;
+        left: 580px;
         animation: b;
         animation: bounce 0.7s; 
         animation-direction: alternate; 
@@ -135,7 +636,7 @@ html{
     }
     .header{
         display: flex;
-        margin: 100px 250px 80px 250px;
+        margin: 100px 240px 80px 240px;
         justify-content: center;
         align-items: center;
         font-size: 20px;
@@ -281,7 +782,7 @@ html{
         width: 58%;
         position: absolute;
         z-index: -3;
-        top: -2.5%;
+        top: -2.8%;
         transform: translateX(50%); 
         right: 0%;
         filter: drop-shadow(2px 2px 0px var(--Red));
@@ -290,7 +791,7 @@ html{
         width: 58%;
         position: absolute;
         z-index: -3;
-        top: -8%;
+        top: -8.8%;
         transform: translateX(-50%); 
         left: 0%;
         filter: drop-shadow(2px 2px 0px var(--Red));
@@ -300,7 +801,7 @@ html{
         width: 58%;
         position: absolute;
         z-index: -3;
-        top: -14.5%;
+        top: -17.8%;
         transform: translateX(50%); 
         right: 0%;
         filter: drop-shadow(2px 2px 0px var(--Red));
@@ -330,7 +831,7 @@ html{
     }
     .footer{
         position: absolute; 
-        top: 5780px; 
+        top: 5820px; 
         left: 550px;
         text-align: center;
     }
@@ -372,10 +873,10 @@ html{
     .preactive{
         position: absolute;
         z-index: 11;
-        top: 210px;
+        top: 230px;
         left: 200px; 
         width: 35%;
-        opacity: 50%;
+        opacity: 35%;
         transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);   
         transform: translateX(-50%); 
     }
@@ -383,7 +884,7 @@ html{
     .active{
         position: absolute;
         z-index: 12;
-        left: 215px; 
+        left: 225px; 
         right: 100px;
         width: 50%;
         box-shadow: 2px 2px 40px black;
@@ -392,10 +893,10 @@ html{
     .proactive{
         position: absolute;
         z-index: 11;
-        top: 210px;
+        top: 230px;
         right: 200px;
         width: 35%;
-        opacity: 50%;
+        opacity: 35%;
         transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
         transform: translateX(50%);
     }
@@ -404,7 +905,7 @@ html{
     .control_right{
         position: absolute;
         z-index: 12;
-        top: 350px;
+        top: 370px;
         right: -60px;
         width: 55%;
         background-color: none;
@@ -421,7 +922,7 @@ html{
     .control_left{
         position: absolute;
         z-index: 12;
-        top: 350px;
+        top: 370px;
         left: -60px;
         width: 55%;
         background-color: none;
@@ -519,35 +1020,532 @@ html{
 
 }
 
+@media all and (max-width: 1025px) {
+    body{
+        width: 100%;
+        background-color: rgb(38, 38, 38);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(204, 204, 204);
+        font-size: 14px;
+        background-image: url("pictures/background.webp");
+        background-attachment:fixed;
+        background-size: 35%;
+        overflow-x: hidden;
+        transition: background-image .5s ease-in-out;
+    }
+
+    .navbar{
+        position: absolute; 
+        top: 5590px; 
+        left:90px;
+        text-align: center;
+    }
+    .navbar a{
+        margin: 50px;        
+        color:var(--Red);
+    }
+    .navbar a:hover{
+        cursor: pointer;
+    }
+    #preloader {
+        position: fixed;
+        z-index:20;
+        top:-50%;
+        width: 200%;
+        height: 200%;
+        background-color: rgb(38, 38, 38);
+        background-size: 15%;
+        overflow: hidden; /* Prevent overflow */
+    }
+    
+    #pre{
+        width: 10%;
+        position: fixed;
+        z-index:20;
+        top:320px;
+        left: 490px;
+    }
+    
+    #ball{
+        width: 10%;
+        position: fixed;
+        z-index:21;
+        top: 110px;
+        left: 490px;
+        animation: b;
+        animation: bounce 0.7s; 
+        animation-direction: alternate; 
+        animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+        animation-iteration-count: infinite; 
+    }
+    
+    @keyframes bounce { 
+        from { 
+            transform: translate3d(0, 0, 0); 
+        } 
+        to { 
+            transform: translate3d(0, 200px, 0); 
+        } 
+    } 
+    
+    ul,li{
+        display: inline-block;
+        margin: 2%;
+    }
+    
+    h1{
+        font-size: 32px;
+    }
+    b, h1{
+        color: rgb(255, 201, 192);
+    }
+    h2{
+        color: rgb(95, 122, 173);
+        text-align: left;
+    }
+    #mainBody{
+        border: 1px solid var(--Blue);
+        position: relative;
+        margin: 100px 130px;
+        padding: 50px;
+        display: block;
+        background-color: var(--Reda);
+        text-align: center;
+    }
+    .skills button{
+        background-color: rgb(82, 82, 82);
+        padding: 0.3rem 1.2rem;
+        margin-top: 0.3rem;
+        border: none;
+        border-radius: 45%;
+        color: rgb(204, 204, 204);
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .icons{
+        display: block;
+        margin-top: -10px; 
+        font-size: 1.3rem;
+        position: absolute;
+        z-index: 4;
+    }
+    span{
+        color: var(--Red);
+        margin-right: 14px;
+    }
+    p{
+        text-align: justify;
+    }
+    .name{
+        display: inline-block; 
+        justify-items: center;
+        margin-bottom: 35px;
+    }
+    .header{
+        display: flex;
+        margin: 150px 150px 150px 150px;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .profile{
+        width: 400px;
+    }
+    .item{
+        width: 30%;
+        position: absolute;
+        top: -50px;
+        right: 40px;
+        z-index: 5;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .cover{
+        z-index: 3; 
+        width: 60%;  
+        border: 3px solid white;
+    }
+    .avatar{
+        width: 6%;
+        position: absolute; 
+        z-index: 3; 
+        left: 590px; 
+        top:1030px; 
+        border: 3px solid white; 
+        border-radius: 50%;
+    }
+    .shop{
+        z-index: 3; 
+        width: 60%;  
+    }
+
+    .bg1{
+        width: 20%;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        filter: drop-shadow(-5px -5px 0px var(--Red));
+        z-index: 4; 
+    }
+    .bg2{
+        width: 26%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Blue));
+        z-index: 4;
+
+    }
+    .bg3{
+        width: 3%;
+        position: absolute;
+        top: 400px;
+        left:135px;
+        filter: drop-shadow(-3px -3px 0px var(--Red));
+        z-index: 5;
+    }
+    .bg4{
+        width: 14%;
+        position: absolute;
+        z-index: 4;
+        top: 1050px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Red));
+    }
+    .bg5{
+        width: 13%;
+        position: absolute;
+        z-index: 4;
+        top: 2300px;
+        left: 0px;
+        filter: drop-shadow(4px 0px 0px var(--Red));
+    }
+    .bg6{
+        width: 13%;
+        position: absolute;
+        z-index: 4;
+        top: 2320px;
+        left: 0px;
+        filter: drop-shadow(3px -3px 0px var(--Blue));
+    }
+    .bg7{
+        width: 18%;
+        position: absolute;
+        z-index: 4;
+        top: 1600px;
+        right: 0;
+        filter: drop-shadow(-5px -5px 0px var(--Blue));
+    }
+    .bg8{
+        width: 16%;
+        position: absolute;
+        z-index: 4;
+        top: 2700px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Blue));
+    }
+    .bg9{
+        width: 12%;
+        position: absolute;
+        z-index: 4;
+        top: 4930px;
+        right: 0;
+        filter: drop-shadow(-4px -4px 0px var(--Red));
+    }
+    .bg12{
+        width: 28%;
+        position: absolute;
+        z-index: 4;
+        top: 4000px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Blue));
+    }
+    .bg11{
+        width: 12%;
+        position: absolute;
+        z-index: 4;
+        top: 4670px;
+        right: 0;
+        filter: drop-shadow(-5px -5px 0px var(--Bluw));
+    }
+    
+    .bg10{
+        width: 10%;
+        position: absolute;
+        z-index: 4;
+        top: 3670px;
+        right: 0;
+        filter: drop-shadow(-4px -4px 0px var(--Red));
+    }
+    .head1{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -8%;
+        transform: translateX(-50%); 
+        left: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .head2{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -1.8%;
+        transform: translateX(50%); 
+        right: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .head3{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -5%;
+        transform: translateX(-50%); 
+        left: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+
+    .head4{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -10%;
+        transform: translateX(50%); 
+        right: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+
+    .head5{
+        width: 58%;
+        position: absolute;
+        z-index: -3;
+        top: -4.8%;
+        transform: translateX(-50%); 
+        left: 0%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    
+    .foot1{
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+        filter: drop-shadow(-5px -5px 0px var(--Red));
+    }
+    .foot2{
+        width: 100%;
+        position: absolute;
+        z-index: -3;
+        filter: drop-shadow(-5px -5px 0px var(--Blue));
+    }
+    .footer{
+        position: absolute; 
+        top: 5660px; 
+        left: 450px;
+        text-align: center;
+        font-size: 12px;
+    }
+    footer{
+        margin-top: -100px;
+    }
+
+    .container{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        height: 500px;
+    }
+    #gallary{
+        display: inline-flex;
+        position: absolute;
+        width: 70%;
+        z-index: 11;
+    }
+    
+    #slide{
+        display: none;
+    }
+    
+    .prepreactive, .proproactive{
+        opacity: 0;
+        position: absolute;
+        z-index: 10;
+        left: 215px; 
+        right: 100px;
+        width: 20%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+    }
+    
+    .preactive{
+        position: absolute;
+        z-index: 11;
+        top: 225px;
+        left: 200px; 
+        width: 35%;
+        opacity: 35%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);   
+        transform: translateX(-50%); 
+    }
+    
+    .active{
+        position: absolute;
+        z-index: 12;
+        left: 190px; 
+        right: 100px;
+        width: 50%;
+        box-shadow: 2px 2px 40px black;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+    }
+    .proactive{
+        position: absolute;
+        z-index: 11;
+        top: 225px;
+        right: 200px;
+        width: 35%;
+        opacity: 35%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+        transform: translateX(50%);
+    }
+    
+    
+    .control_right{
+        position: absolute;
+        z-index: 12;
+        top: 340px;
+        right: -60px;
+        width: 55%;
+        background-color: none;
+    }
+    .control_i{
+        font-size: 30px;
+        opacity: .4;
+        cursor: pointer;
+    }
+    .control_i:hover, .control_i:hover{
+        opacity: .8;
+    }
+    
+    .control_left{
+        position: absolute;
+        z-index: 12;
+        top: 340px;
+        left: -60px;
+        width: 55%;
+        background-color: none;
+    }
+
+
+
+
+
+    #modeToggleLight {
+        width: 70px;
+        height: 30px;
+        top: 50px;
+        left: 850px;
+        position: absolute;
+        z-index: 8;
+        background: #d8d8d8;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    #modeToggleDark {
+        width: 70px;
+        height: 30px;
+        top: 50px;
+        left: 850px;
+        position: absolute;
+        z-index: 8;
+        background: #444444;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    @keyframes circleDark {
+        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 852px;}
+        10%  {background: linear-gradient(180deg, #777, #242424)}
+        100%  {background: linear-gradient(180deg, #777, #242424); left: 892px}
+    }
+    
+    @keyframes circleLight{
+        0%  {background: linear-gradient(180deg, #777, #242424); left: 892px}
+        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
+        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 852px;}
+    }
+    
+    
+    #circle{
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 52.5px;
+        left:892px;
+        cursor: pointer;
+        z-index: 9;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(180deg, #777, #242424);
+    }
+    
+    
+    
+    #sunLight, #sunDark, #moonLight, #moonDark {
+        position: absolute;
+        width: 18px;
+        top: 55px;
+        z-index: 10;
+        transition: 1s;
+        cursor: pointer;
+    }
+    
+    #sunLight {
+        left: 855.5px;
+    }
+    
+    #sunDark {
+        left: 855.5px;
+    }
+    
+    #moonLight {
+        left: 896px;
+    }
+    
+    #moonDark {
+        left: 896px;
+    }
+
+}
+
 
 @media all and (max-width: 800px) {
     body{
         width: 100%;
         font-size: 12px;
-        background-size: 85%;
+        background-size: 45%;
     }
     #preloader{
         position: fixed;
-        z-index:10;
+        z-index:20;
         top:-50%;
         width: 100%;
         background-color: rgb(38, 38, 38);
-        background-size: 85%;
     }
     
     #pre{
-        width: 20%;
+        width: 10%;
         position: fixed;
-        z-index:11;
-        top:320px;
-        left: 150px;
+        z-index:20;
+        top:300px;
+        left: 380px;
     }
     #ball{
-        width: 20%;
+        width: 10%;
         position: fixed;
-        z-index:11;
-        top: 120px;
-        left: 150px;
+        z-index:25;
+        top: 100px;
+        left: 380px;
         animation: b;
         animation: bounce 0.7s; 
         animation-direction: alternate; 
@@ -564,6 +1562,10 @@ html{
         } 
     } 
 
+    h1{
+        font-size: 32px;
+    }
+
     b, h1{
         color: rgb(255, 201, 192);
     }
@@ -573,20 +1575,439 @@ html{
     }
     #mainBody{
         border: 1px solid var(--Blue);
-        margin: 35px 35px;
-        padding: 8px;
+        margin: 35px 75px;
+        padding: 25px;
         display: block;
         text-align: center;
     }
     .navbar{
-        top: 4700px; 
-        left:0px;
+        top: 4400px; 
+        left:70px;
         text-align: center;
     }
     .navbar a{
-        margin: 8px;        
+        margin: 40px;        
         color:var(--Red);
         font-size: 10px;
+    }
+    .icons{
+        display: block;
+        margin-top: -22px; 
+        font-size: 1.3rem;
+        position: absolute;
+        z-index: 4;        
+        margin-left: 65px;
+    }
+    span{
+        color: var(--Red);
+        margin-right: 14px;
+    }
+    p{
+        text-align: justify;
+    }
+    .name{
+        display: inline-block; 
+        justify-items: center;
+        align-items: center;
+        margin-bottom: 35px;
+        margin-left: 65px;
+        margin-top: 30px;
+    }
+    .header{
+        display: block;
+        margin: 150px 55px;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    .profile{
+        width: 350px;
+        margin-left: 260px;
+        margin-top: -200px;
+    }
+    .cover{
+        z-index: 3; 
+        width: 60%;  
+        border: 3px solid white;
+    }
+    .avatar{
+        width: 8%;
+        position: absolute; 
+        z-index: 3; 
+        left: 173px; 
+        top:1042px; 
+        border: 3px solid white; 
+        border-radius: 50%;
+    }
+    .shop{
+        z-index: 3; 
+        width: 60%;  
+    }
+    .item{
+        width: 35%;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        z-index: 5;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .bg1 {
+        position: absolute;
+        top: 210px; 
+        right: 0; 
+        width: 20%;
+        filter: drop-shadow(-5px -5px 0px var(--Red));
+        z-index: 4;
+    }
+    .bg2{
+        width: 35%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Blue));
+        z-index: 4;
+    }
+    .bg3{
+        width: 50%;
+        position: absolute;
+        z-index: 4;
+        top: -10px;
+        left: -400px;
+        filter: drop-shadow(-3px -3px 0px var(--Red));
+    }
+    .bg4{
+        width: 15%;
+        position: absolute;
+        z-index: 4;
+        top: 890px;
+        left: 0px;
+        filter: drop-shadow(4px 4px 0px var(--Red));
+    }
+    .bg5{
+        width: 10%;
+        position: absolute;
+        z-index: 4;
+        top: 2050px;
+        left: 0px;
+        filter: drop-shadow(2px 0px 0px var(--Red));
+    }
+    .bg6{
+        width: 5%;
+        position: absolute;
+        z-index: 4;
+        top: 2085px;
+        left: 10px;
+        filter: drop-shadow(2px 0px 0px var(--Blue));
+    }
+    .bg7{
+        width: 20%;
+        position: absolute;
+        z-index: 4;
+        top: 1550px;
+        float: right;
+        filter: drop-shadow(-3px -3px 0px var(--Blue));
+    }
+    .bg8{
+        width: 15%;
+        position: absolute;
+        z-index: 4;
+        top: 2145px;
+        left: 0px;
+        filter: drop-shadow(3px 3px 0px var(--Blue));
+    }
+    .bg9{
+        width: 12%;
+        position: absolute;
+        z-index: 4;
+        top: 4000px;
+        float: right;
+        filter: drop-shadow(-2px -2px 0px var(--Red));
+    }
+    .bg10{
+        width: 8%;
+        top: 2700px;
+    }
+    .bg12{
+        top: 3100px;
+    }
+    .head1{
+        width: 55%;
+        position: absolute;
+        z-index: -3;
+        top: -9%;
+        transform: translateX(-50%); 
+        left: 15%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .head2{
+        width: 55%;
+        position: absolute;
+        z-index: -3;
+        top: -2.3%;
+        transform: translateX(50%); 
+        right: 15%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .head3{
+        width: 55%;
+        position: absolute;
+        z-index: -3;
+        top: -6.5%;
+        transform: translateX(-50%); 
+        left: 15%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .head4{
+        width: 55%;
+        position: absolute;
+        z-index: -3;
+        top: -12%;
+        transform: translateX(50%); 
+        right: 15%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .head5{
+        width: 55%;
+        position: absolute;
+        z-index: -3;
+        top: -5.5%;
+        transform: translateX(-50%); 
+        left: 15%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+    .foot1{
+        width: 100%;
+        position: absolute;
+        z-index: -2;
+        filter: drop-shadow(-3px -3px 0px var(--Red));
+    }
+    .foot2{
+        width: 100%;
+        position: absolute;
+        z-index: -3;
+        filter: drop-shadow(-3px -3px 0px var(--Blue));
+    }
+    .footer{
+        position: absolute; 
+        top: 4455px; 
+        left: 45%;
+        font-size: 8px;
+        text-align: center;
+        font-size: 8px;
+    }
+    footer{
+        margin-top: -10px;
+    }
+
+    .container{
+        height: 350px;
+    }
+
+    .preactive{
+        width: 35%;
+        left: 120px;
+        top: 160px;
+    }
+    
+    .active{
+        width: 55%;
+        top: 120px;
+        left: 140px; 
+        right: 0px;
+        transform: translateX(0%);
+    }
+    .proactive{
+        width: 35%;
+        top: 160px;
+        right: 120px;
+    }
+    .control_left, .control_right{
+        top: 250px;
+    }
+    #modeToggleLight {
+        width: 50px;
+        height: 25px;
+        top: 50px;
+        left: 620px;
+        position: absolute;
+        z-index: 8;
+        background: #d8d8d8;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    #modeToggleDark {
+        width: 50px;
+        height: 25px;
+        top: 50px;
+        left: 620px;
+        position: absolute;
+        z-index: 8;
+        background: #444444;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    @keyframes circleDark {
+        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 622px;}
+        10%  {background: linear-gradient(180deg, #777, #242424)}
+        100%  {background: linear-gradient(180deg, #777, #242424); left: 648px}
+    }
+    
+    @keyframes circleLight{
+        0%  {background: linear-gradient(180deg, #777, #242424); left: 648px}
+        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
+        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 622px;}
+    }
+    
+    
+    #circle{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 52.5px;
+        left:648px;
+        cursor: pointer;
+        z-index: 9;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(180deg, #777, #242424);
+    }
+    
+    #sunLight, #sunDark, #moonLight, #moonDark {
+        position: absolute;
+        width: 15px;
+        top: 55px;
+        z-index: 10;
+        transition: 1s;
+        cursor: pointer;
+    }
+    
+    #sunLight {
+        left: 624.5px;
+    }
+    
+    #sunDark {
+        left: 624.5px;
+    }
+    
+    #moonLight {
+        left: 650px;
+    }
+    
+    #moonDark {
+        left: 650px;
+    }
+
+}
+
+
+@media all and (max-width: 415px) {
+    body{
+        width: 100%;
+        background-color: rgb(38, 38, 38);
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(204, 204, 204);
+        font-size: 12px;
+        background-image: url("pictures/background.webp");
+        background-attachment:fixed;
+        background-size: 45%;
+        overflow-x: hidden;
+        transition: background-image .5s ease-in-out;
+    }
+
+    .navbar{
+        position: absolute; 
+        top: 4360px; 
+        left:38px;
+        text-align: center;
+    }
+    .navbar a{
+        margin: 10px;        
+        color:var(--Red);
+        font-size: 10px;
+    }
+
+    .navbar a:hover{
+        cursor: pointer;
+    }
+    #preloader {
+        position: fixed;
+        z-index:20;
+        top:-50%;
+        width: 100%;
+        height: 200%;
+        background-color: rgb(38, 38, 38);
+        background-size: 15%;
+        overflow: hidden; /* Prevent overflow */
+    }
+    #pre{
+        z-index:20;
+        width: 20%;
+        top:400px;
+        left: 170px;
+        position: fixed;
+        top:320px;
+    }
+    
+    #ball{
+        width: 20%;
+        position: fixed;
+        z-index:21;
+        top: 200px;
+        left: 170px;
+        animation: b;
+        animation: bounce 0.7s; 
+        animation-direction: alternate; 
+        animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+        animation-iteration-count: infinite;  
+    }
+
+    
+    @keyframes bounce { 
+        from { 
+            transform: translate3d(0, 0, 0); 
+        } 
+        to { 
+            transform: translate3d(0, 200px, 0); 
+        } 
+    } 
+    
+    ul,li{
+        display: inline-block;
+        margin: 2%;
+    }
+    
+
+    b, h1{
+        color: rgb(255, 201, 192);
+    }
+    h2{
+        color: rgb(95, 122, 173);
+        text-align: left;
+    }
+    #mainBody{
+        border: 1px solid var(--Blue);
+        position: relative;
+        margin: 35px 35px;
+        padding: 8px;
+        display: block;
+        background-color: var(--Reda);
+        text-align: center;
+    }
+    .skills button{
+        background-color: rgb(82, 82, 82);
+        padding: 0.3rem 1.2rem;
+        margin-top: 0.3rem;
+        font-size: 12px;
+        border: none;
+        border-radius: 45%;
+        color: rgb(204, 204, 204);
+        filter: drop-shadow(2px 2px 0px var(--Red));
     }
     .icons{
         display: block;
@@ -610,14 +2031,23 @@ html{
     }
     .header{
         display: block;
-        margin: 120px 25px;
+        margin: 200px 25px;
         justify-content: center;
         align-items: center;
         font-size: 20px;
     }
     .profile{
-        width: 300px;
+        width: 380px;
         margin-left: 10px;
+        margin-top: 5px;
+    }
+    .item{
+        width: 45%;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        z-index: 5;
+        filter: drop-shadow(2px 2px 0px var(--Red));
     }
     .cover{
         z-index: 3; 
@@ -637,24 +2067,17 @@ html{
         z-index: 3; 
         width: 60%;  
     }
-    .item{
-        width: 45%;
-        position: absolute;
-        top: 0px;
-        right: 10px;
-        z-index: 5;
-        filter: drop-shadow(2px 2px 0px var(--Red));
-    }
-    .bg1 {
-        position: absolute;
-        top: 410px; 
-        right: 0; 
+
+    .bg1{
         width: 30%;
+        position: absolute;
+        right: 0;
+        top: 600px;
         filter: drop-shadow(-5px -5px 0px var(--Red));
-        z-index: 4;
+        z-index: 4; 
     }
     .bg2{
-        width: 60%;
+        width: 65%;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -664,18 +2087,18 @@ html{
     .bg3{
         width: 100%;
         position: absolute;
-        z-index: 4;
         top: -10px;
-        left: -400px;
+        left:-400px;
         filter: drop-shadow(-3px -3px 0px var(--Red));
+        z-index: 4;
     }
     .bg4{
         width: 15%;
         position: absolute;
         z-index: 4;
-        top: 1290px;
+        top: 1450px;
         left: 0px;
-        filter: drop-shadow(4px 4px 0px var(--Red));
+        filter: drop-shadow(5px 5px 0px var(--Red));
     }
     .bg5{
         width: 10%;
@@ -691,46 +2114,64 @@ html{
         z-index: 4;
         top: 2465px;
         left: 10px;
-        filter: drop-shadow(2px 0px 0px var(--Blue));
+        filter: drop-shadow(2px -5px 0px var(--Blue));
     }
     .bg7{
         width: 20%;
         position: absolute;
         z-index: 4;
-        top: 1800px;
-        float: right;
+        top: 1950px;
+        right: 0;
         filter: drop-shadow(-3px -3px 0px var(--Blue));
     }
     .bg8{
         width: 15%;
         position: absolute;
         z-index: 4;
-        top: 2745px;
+        top: 2760px;
         left: 0px;
-        filter: drop-shadow(3px 3px 0px var(--Blue));
+        filter: drop-shadow(5px 5px 0px var(--Blue));
     }
     .bg9{
         width: 12%;
         position: absolute;
         z-index: 4;
-        top: 4500px;
+        top: 4125px;
         float: right;
         filter: drop-shadow(-2px -2px 0px var(--Red));
     }
+    .bg12{
+        width: 28%;
+        position: absolute;
+        z-index: 4;
+        top: 3500px;
+        left: 0px;
+        filter: drop-shadow(5px 5px 0px var(--Blue));
+    }
+    .bg11{
+        width: 12%;
+        position: absolute;
+        z-index: 4;
+        top: 4670px;
+        right: 0;
+        filter: drop-shadow(-5px -5px 0px var(--Bluw));
+    }
+    
     .bg10{
         width: 8%;
+        position: absolute;
+        z-index: 4;
         top: 3100px;
-    }
-    .bg12{
-        top: 3500px;
+        right: 0;
+        filter: drop-shadow(-2px -2px 0px var(--Red));
     }
     .head1{
         width: 85%;
         position: absolute;
         z-index: -3;
-        top: -12%;
+        top: -3%;
         transform: translateX(-50%); 
-        left: 20%;
+        left: 25%;
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
     .head2{
@@ -739,19 +2180,38 @@ html{
         z-index: -3;
         top: -2.5%;
         transform: translateX(50%); 
-        right: 20%;
+        right: 25%;
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
     .head3{
         width: 85%;
         position: absolute;
         z-index: -3;
-        top: -6%;
+        top: -8%;
         transform: translateX(-50%); 
-        left: 20%;
+        left: 25%;
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
-    
+
+    .head4{
+        width: 85%;
+        position: absolute;
+        z-index: -3;
+        top: -11.5%;
+        transform: translateX(50%); 
+        right: 25%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
+
+    .head5{
+        width: 85%;
+        position: absolute;
+        z-index: -3;
+        top: -10%;
+        transform: translateX(-50%); 
+        left: 25%;
+        filter: drop-shadow(2px 2px 0px var(--Red));
+    }
     .foot1{
         width: 100%;
         position: absolute;
@@ -764,9 +2224,10 @@ html{
         z-index: -3;
         filter: drop-shadow(-3px -3px 0px var(--Blue));
     }
+    
     .footer{
         position: absolute; 
-        top: 4510px; 
+        top: 4330px; 
         left: 35%;
         font-size: 8px;
         text-align: center;
@@ -776,108 +2237,182 @@ html{
         margin-top: -10px;
     }
 
+
+    .container{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        height: 250px;
+    }
+    #gallary{
+        display: inline-flex;
+        position: absolute;
+        width: 70%;
+        z-index: 11;
+    }
+    
+    #slide{
+        display: none;
+    }
+    
+    .prepreactive, .proproactive{
+        opacity: 0;
+        position: absolute;
+        z-index: 10;
+        left: 215px; 
+        right: 100px;
+        width: 20%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+    }
+    
     .preactive{
+        position: absolute;
+        z-index: 11;
         width: 45%;
         left: 60px;
         top: 130px;
+        opacity: 50%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);   
+        transform: translateX(-50%); 
     }
     
     .active{
+        position: absolute;
+        z-index: 12;
         width: 65%;
         top: 90px;
         left: 60px; 
         right: 0px;
         transform: translateX(0%);
+        box-shadow: 2px 2px 40px black;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
     }
     .proactive{
+        position: absolute;
+        z-index: 11;
         width: 45%;
         top: 130px;
         right: 60px;
+        opacity: 50%;
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+        transform: translateX(50%);
     }
-    .control_left, .control_right{
-        top: 200px;
-    }
-
-}
-
-
-@media all and (max-width: 500px) {
-    #pre{
-        width: 20%;
-        top:400px;
-        left: 170px;
-    }
-    #ball{
-        width: 20%;
-        top: 200px;
-        left: 170px;
-    }
-    .header{
-        margin: 200px 25px;
-    }
-    .profile{
-        width: 380px;
-    }
-    .head1{
-        top: -15%;
-    }
-    .head2{
-        top: -3%;
-    }
-    .head3{
-        top: -9%;
-    }
-    .head4{
-        top: -10%;
-    }
-    .head5{
-        top: -6%
-    }
-    .bg1 {
-        top: 600px; 
-    }
-    .bg2{
-        width: 65%;
-    }
-    .bg4{
-        top: 1450px;
-    }
-    .bg7{
-        top: 1950px;
-    }
-    .bg8{
-        top: 2760px;
-    }
-    .bg9{
-        top: 4125px;
-    }
-    .bg10{
-        filter: drop-shadow(-2px -2px 0px var(--Red));
-    }
-    .skills button{
-        font-size: 12px;
-    }
-
-    .container{
-        height: 250px;
-    }
-
-    .footer{
-        top: 4390px;
-    }
-    .navbar{
-        top: 4360px; 
-        left:38px;
-        text-align: center;
-    }
-    .navbar a{
-        margin: 10px;        
-        color:var(--Red);
-        font-size: 10px;
-    }
-    .control_left, .control_right{
+    
+    
+    .control_right{
+        position: absolute;
+        z-index: 12;
         top: 185px;
+        right: -60px;
+        width: 55%;
+        background-color: none;
     }
+    .control_i{
+        font-size: 30px;
+        opacity: .4;
+        cursor: pointer;
+    }
+    .control_i:hover, .control_i:hover{
+        opacity: .8;
+    }
+    
+    .control_left{
+        position: absolute;
+        z-index: 12;
+        top: 185px;
+        left: -60px;
+        width: 55%;
+        background-color: none;
+    }
+
+
+
+
+    #modeToggleLight {
+        width: 50px;
+        height: 20px;
+        top: 50.5px;
+        left: 330px;
+        position: absolute;
+        z-index: 8;
+        background: #d8d8d8;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    #modeToggleDark {
+        width: 50px;
+        height: 20px;
+        top: 50.5px;
+        left: 330px;
+        position: absolute;
+        z-index: 8;
+        background: #444444;
+        border-radius: 200px;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+        cursor: pointer;
+        transition: 1s;
+    }
+    
+    @keyframes circleDark {
+        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 332px;}
+        10%  {background: linear-gradient(180deg, #777, #242424)}
+        100%  {background: linear-gradient(180deg, #777, #242424); left: 362px}
+    }
+    
+    @keyframes circleLight{
+        0%  {background: linear-gradient(180deg, #777, #242424); left: 362px}
+        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
+        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 332px;}
+    }
+    
+    
+    #circle{
+        width: 16.5px;
+        height: 16.5px;
+        position: absolute;
+        left:362px;
+        cursor: pointer;
+        z-index: 9;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(180deg, #777, #242424);
+    }
+    
+    
+    
+    #sunLight, #sunDark, #moonLight, #moonDark {
+        position: absolute;
+        width: 13px;
+        top: 54px;
+        z-index: 10;
+        transition: 1s;
+        cursor: pointer;
+    }
+    
+    #sunLight {
+        left: 333.5px;
+    }
+    
+    #sunDark {
+        left: 333.5px;
+    }
+    
+    #moonLight {
+        left: 364px;
+    }
+    
+    #moonDark {
+        left: 364px;
+    }
+    
+
+
+    
+
+
 }
 
 @media  all and (max-width: 415px) {
