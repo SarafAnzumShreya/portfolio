@@ -2416,6 +2416,9 @@ html{
 }
 
 @media  all and (max-width: 415px) {
+    body{
+    background-size: 65%;
+    } 
     #pre{
         width: 20%;
         top:400px;
