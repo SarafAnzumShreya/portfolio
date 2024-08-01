@@ -1022,7 +1022,7 @@ html{
         font-size: 14px;
         background-image: url("pictures/background.webp");
         background-attachment:fixed;
-        background-size: 35%;
+        background-size: 40%;
         overflow-x: hidden;
         transition: background-image .5s ease-in-out;
     }
@@ -1507,7 +1507,7 @@ html{
     body{
         width: 100%;
         font-size: 12px;
-        background-size: 45%;
+        background-size: 55%;
     }
     #preloader{
         position: fixed;
@@ -1894,7 +1894,7 @@ html{
         font-size: 12px;
         background-image: url("pictures/background.webp");
         background-attachment:fixed;
-        background-size: 45%;
+        background-size: 80%;
         overflow-x: hidden;
         transition: background-image .5s ease-in-out;
     }
