@@ -355,9 +355,6 @@ window.addEventListener("load",function(){
 
     slideInitial();
 
-
-    // light mode toggle
-
     
 
 });
