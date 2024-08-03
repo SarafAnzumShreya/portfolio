@@ -91,10 +91,12 @@ html{
 
     b, h1{
         color: rgb(255, 201, 192);
+        transition: color .5s ease-in-out;
     }
     h2{
         color: rgb(95, 122, 173);
         text-align: left;
+        transition: color .5s ease-in-out;
     }
     #mainBody{
         border: 1px solid var(--Blue);
@@ -104,6 +106,7 @@ html{
         display: block;
         background-color: var(--Reda);
         text-align: center;
+        transition: background-color .5s ease-in-out;
     }
     .skills button{
         background-color: rgb(82, 82, 82);
