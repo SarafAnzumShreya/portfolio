@@ -1792,8 +1792,16 @@ html{
         top: 250px;
     }
 
+    .footer {
+        height: 300px; 
+    }
+
+    .footer p {
+        margin: 10px 0;
+    }
+
     .footer .navbar a {
-        margin: 40px 20px;
+        margin: 40px 10px;
         text-decoration: none;
     }
 
@@ -2400,7 +2408,7 @@ html{
         top: 190px;
     }
     .footer{
-        font-size: 5px;
+        font-size: 10px;
     }
 
 }
