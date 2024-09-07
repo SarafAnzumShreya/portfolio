@@ -12,6 +12,7 @@
     --Red: rgb(255, 26, 64);
     --Reda: rgba(191, 191, 191, 0.15);
     --RedaL: rgba(178, 178, 178, 0.447);
+    --col: rgb(255, 201, 192);
 }
 
 html{
@@ -90,11 +91,11 @@ html{
     
 
     b, h1{
-        color: rgb(255, 201, 192);
+        color: var(--col);
         transition: color .5s ease-in-out;
     }
     h2{
-        color: rgb(95, 122, 173);
+        color: rgb(97, 124, 174);
         text-align: left;
         transition: color .5s ease-in-out;
     }
@@ -630,7 +631,7 @@ html{
     
 
     b, h1{
-        color: rgb(255, 201, 192);
+        color: var(--col);
     }
     h2{
         color: rgb(95, 122, 173);
@@ -1107,7 +1108,7 @@ html{
         font-size: 32px;
     }
     b, h1{
-        color: rgb(255, 201, 192);
+        color: var(--col);
     }
     h2{
         color: rgb(95, 122, 173);
@@ -1556,7 +1557,7 @@ html{
     }
 
     b, h1{
-        color: rgb(255, 201, 192);
+        color: var(--col);
     }
     h2{
         color: rgb(171, 200, 255);
@@ -1955,7 +1956,7 @@ html{
     
 
     b, h1{
-        color: rgb(255, 201, 192);
+        color: var(--col);
     }
     h2{
         color: rgb(95, 122, 173);
