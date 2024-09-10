@@ -455,13 +455,7 @@ html{
         left: 0%;
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
-    
 
-    .image-container {
-        position: relative;
-        width: 100%; /* Adjust as needed */
-        height: 100%;
-    }
 
     .footer {
         position: relative;
@@ -526,91 +520,95 @@ html{
 
 
 
-    .container{
+    .container {
         width: 100%;
         text-align: center;
         align-items: center;
         height: 500px;
-    }
-    #gallary{
-        display: inline-flex;
-        position: absolute;
-        width: 70%;
-        z-index: 11;
+        position: relative; /* Allows precise positioning of the slides */
     }
     
-    #slide{
+    #gallery {
+        display: flex;
+        justify-content: center; /* Centers the carousel horizontally */
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    #slide {
         display: none;
     }
     
-    .prepreactive, .proproactive{
+    .prepreactive,
+    .proproactive {
         opacity: 0;
         position: absolute;
-        z-index: 10;
-        left: 215px; 
-        right: 100px;
         width: 20%;
         transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+        top: 50%; /* Align with the middle of the active image */
+        transform: translateY(-50%); /* Adjust vertically */
     }
     
-    .preactive{
+    .preactive {
         position: absolute;
-        z-index: 11;
-        top: 260px;
-        left: 200px; 
+        top: 50%; /* Center vertically */
+        left: 15%; /* Move to the left */
         width: 35%;
         opacity: 35%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);   
-        transform: translateX(-50%); 
+        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
+        transform: translate(-50%, -50%); /* Adjust for positioning */
     }
     
-    .active{
+    .active {
         position: absolute;
         z-index: 12;
-        left: 260px; 
-        right: 100px;
+        left: 50%; /* Center horizontally */
+        top: 50%; /* Center vertically */
+        transform: translate(-50%, -50%); /* Adjust for perfect centering */
         width: 50%;
         box-shadow: 2px 2px 40px black;
         transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
     }
-    .proactive{
+    
+    .proactive {
         position: absolute;
-        z-index: 11;
-        top: 260px;
-        right: 200px;
+        top: 50%; /* Center vertically */
+        right: 15%; /* Move to the right */
         width: 35%;
         opacity: 35%;
         transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-        transform: translateX(50%);
+        transform: translate(50%, -50%); /* Adjust positioning */
     }
     
-    
-    .control_right{
+    .control_right {
         position: absolute;
         z-index: 12;
-        top: 430px;
+        top: 47%; /* Align control buttons vertically */
         right: -60px;
         width: 55%;
-        background-color: none;
-    }
-    .control_i{
-        font-size: 30px;
-        opacity: .4;
-        cursor: pointer;
-    }
-    .control_i:hover, .control_i:hover{
-        opacity: .8;
     }
     
-    .control_left{
+    .control_i {
+        font-size: 30px;
+        opacity: 0.4;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .control_i:hover {
+        opacity: 0.8;
+    }
+    
+    .control_left {
         position: absolute;
         z-index: 12;
-        top: 430px;
+        top: 47%; /* Align control buttons vertically */
         left: -60px;
         width: 55%;
-        background-color: none;
     }
-
+    
     #toggleWrapper {
         position: absolute;
         top: 50px;  
@@ -974,96 +972,7 @@ html{
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
     
-    
 
-
-
-
-
-    .container{
-        width: 100%;
-        text-align: center;
-        align-items: center;
-        height: 500px;
-    }
-    #gallary{
-        display: inline-flex;
-        position: absolute;
-        width: 70%;
-        z-index: 11;
-    }
-    
-    #slide{
-        display: none;
-    }
-    
-    .prepreactive, .proproactive{
-        opacity: 0;
-        position: absolute;
-        z-index: 10;
-        left: 215px; 
-        right: 100px;
-        width: 20%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-    }
-    
-    .preactive{
-        position: absolute;
-        z-index: 11;
-        top: 230px;
-        left: 200px; 
-        width: 35%;
-        opacity: 35%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);   
-        transform: translateX(-50%); 
-    }
-    
-    .active{
-        position: absolute;
-        z-index: 12;
-        left: 225px; 
-        right: 100px;
-        width: 50%;
-        box-shadow: 2px 2px 40px black;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-    }
-    .proactive{
-        position: absolute;
-        z-index: 11;
-        top: 230px;
-        right: 200px;
-        width: 35%;
-        opacity: 35%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-        transform: translateX(50%);
-    }
-    
-    
-    .control_right{
-        position: absolute;
-        z-index: 12;
-        top: 370px;
-        right: -60px;
-        width: 55%;
-        background-color: none;
-    }
-    .control_i{
-        font-size: 30px;
-        opacity: .4;
-        cursor: pointer;
-    }
-    .control_i:hover, .control_i:hover{
-        opacity: .8;
-    }
-    
-    .control_left{
-        position: absolute;
-        z-index: 12;
-        top: 370px;
-        left: -60px;
-        width: 55%;
-        background-color: none;
-    }
 }
 
 @media all and (max-width: 1025px) {
@@ -1359,94 +1268,9 @@ html{
         left: 0%;
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
-    
-
-
-    .container{
-        width: 100%;
-        text-align: center;
-        align-items: center;
-        height: 400px;
+    .container {
+        height: 300px;
     }
-    #gallary{
-        display: inline-flex;
-        position: absolute;
-        width: 70%;
-        z-index: 11;
-    }
-    
-    #slide{
-        display: none;
-    }
-    
-    .prepreactive, .proproactive{
-        opacity: 0;
-        position: absolute;
-        z-index: 10;
-        left: 215px; 
-        right: 100px;
-        width: 20%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-    }
-    
-    .preactive{
-        position: absolute;
-        z-index: 11;
-        top: 225px;
-        left: 200px; 
-        width: 35%;
-        opacity: 35%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);   
-        transform: translateX(-50%); 
-    }
-    
-    .active{
-        position: absolute;
-        z-index: 12;
-        left: 190px; 
-        right: 100px;
-        width: 50%;
-        box-shadow: 2px 2px 40px black;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-    }
-    .proactive{
-        position: absolute;
-        z-index: 11;
-        top: 225px;
-        right: 200px;
-        width: 35%;
-        opacity: 35%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-        transform: translateX(50%);
-    }
-    
-    
-    .control_right{
-        position: absolute;
-        z-index: 12;
-        top: 340px;
-        right: -60px;
-        width: 55%;
-        background-color: none;
-    }
-    .control_i{
-        font-size: 30px;
-        opacity: .4;
-        cursor: pointer;
-    }
-    .control_i:hover, .control_i:hover{
-        opacity: .8;
-    }
-    
-    .control_left{
-        position: absolute;
-        z-index: 12;
-        top: 340px;
-        left: -60px;
-        width: 55%;
-        background-color: none;
-    }
-
 
 }
 
@@ -1703,33 +1527,6 @@ html{
         left: 15%;
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
-   
-
-    .container{
-        height: 350px;
-    }
-
-    .preactive{
-        width: 35%;
-        left: 120px;
-        top: 160px;
-    }
-    
-    .active{
-        width: 55%;
-        top: 120px;
-        left: 140px; 
-        right: 0px;
-        transform: translateX(0%);
-    }
-    .proactive{
-        width: 35%;
-        top: 160px;
-        right: 120px;
-    }
-    .control_left, .control_right{
-        top: 250px;
-    }
 
     .footer {
         height: 300px; 
@@ -1742,6 +1539,9 @@ html{
     .footer .navbar a {
         margin: 40px 10px;
         text-decoration: none;
+    }
+    container {
+        height: 200px;
     }
 
 }
@@ -2041,100 +1841,14 @@ html{
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
 
-
-    .container{
-        width: 100%;
-        text-align: center;
-        align-items: center;
-        height: 220px;
-    }
-    #gallary{
-        display: inline-flex;
-        position: absolute;
-        width: 70%;
-        z-index: 11;
-    }
-    
-    #slide{
-        display: none;
-    }
-    
-    .prepreactive, .proproactive{
-        opacity: 0;
-        position: absolute;
-        z-index: 10;
-        left: 215px; 
-        right: 100px;
-        width: 20%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-    }
-    
-    .preactive{
-        position: absolute;
-        z-index: 11;
-        width: 45%;
-        left: 60px;
-        top: 130px;
-        opacity: 50%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);   
-        transform: translateX(-50%); 
-    }
-    
-    .active{
-        position: absolute;
-        z-index: 12;
-        width: 65%;
-        top: 90px;
-        left: 60px; 
-        right: 0px;
-        transform: translateX(0%);
-        box-shadow: 2px 2px 40px black;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-    }
-    .proactive{
-        position: absolute;
-        z-index: 11;
-        width: 45%;
-        top: 130px;
-        right: 60px;
-        opacity: 50%;
-        transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
-        transform: translateX(50%);
-    }
-    
-    
-    .control_right{
-        position: absolute;
-        z-index: 12;
-        top: 185px;
-        right: -60px;
-        width: 55%;
-        background-color: none;
-    }
-    .control_i{
-        font-size: 30px;
-        opacity: .4;
-        cursor: pointer;
-    }
-    .control_i:hover, .control_i:hover{
-        opacity: .8;
-    }
-    
-    .control_left{
-        position: absolute;
-        z-index: 12;
-        top: 185px;
-        left: -60px;
-        width: 55%;
-        background-color: none;
-    }   
-
-
     .footer .navbar a {
         margin: 40px 10px;
         text-decoration: none;
     }
 
+    container {
+        height: 150px;
+    }
 
 }
 
@@ -2176,9 +1890,6 @@ html{
     
     .skills button{
         font-size: 12px;
-    }
-    .control_left, .control_right{
-        top: 190px;
     }
     .footer{
         font-size: 10px;
@@ -2250,7 +1961,7 @@ html{
         font-size: 10px;
     }
     .container{
-        height: 200px;
+        height: 170px;
     }
 
     
@@ -2313,9 +2024,7 @@ html{
     .skills button{
         font-size: 10px;
     }
-    .container{
-        height: 190px;
-    }
+    
     .active {
         top: 97px;
     }
