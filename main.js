@@ -55,6 +55,10 @@ sunDark.style.display = "block";
 circle.style.display = "block";
 
 window.addEventListener("load",function(){
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+
     preloader.style.display="none";
 
     open.addEventListener('click', () => {
@@ -64,6 +68,47 @@ window.addEventListener("load",function(){
     close.addEventListener('click', () => {
         document.getElementById("mySidenav").style.width = "0px";
     })
+
+    window.onscroll = function() {
+        var navbar = document.getElementById("navbar1");
+        if ((document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)) {
+          navbar.classList.add("visible");
+        } else {
+          navbar.classList.remove("visible");
+        }
+
+        // Calculate the current scroll position and the height of the page
+        var scrollPosition = window.scrollY + window.innerHeight;
+        var pageHeight = document.documentElement.scrollHeight;
+
+        // Check if the user has scrolled to the bottom
+        if (scrollPosition >= pageHeight-400) {
+            navbar.classList.remove("visible");
+        } 
+    };
+      
+    
+    const divs = document.querySelectorAll('div#mainBody');
+    const navLinks = document.querySelectorAll('.navbar1 a');
+
+    function setActiveLink() {
+        let index = divs.length;
+
+        while(--index && window.scrollY + 200 < divs[index].offsetTop) {}
+
+        // Remove 'active' class from all links
+        navLinks.forEach((link) => link.classList.remove('active1'));
+
+        // Add 'active' class to the current div's corresponding link
+        if (navLinks[index]) {
+            navLinks[index].classList.add('active1');
+        }
+    }
+
+    setActiveLink(); // Set the initial active link
+    window.addEventListener('scroll', setActiveLink);
+
+
 
     modeToggle.addEventListener('click', () => {
         if (modeToggleLight.style.display == "none"){
