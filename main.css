@@ -36,7 +36,7 @@ html{
     .navbarIcon{
         font-size:30px;
         cursor:pointer;
-        position: fixed;
+        position: absolute;
         z-index: 18;
         margin: 3rem;
     }
@@ -522,16 +522,6 @@ html{
         width: 55%;
         background-color: none;
     }
-
-
-    #modeToggle{
-        position: fixed;
-        z-index: 17;
-        top: 0;
-        left: 0;
-        margin: 10rem;
-    }
-
 
     #modeToggleLight {
         width: 70px;
