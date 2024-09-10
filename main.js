@@ -71,7 +71,7 @@ window.addEventListener("load",function(){
 
     window.onscroll = function() {
         var navbar = document.getElementById("navbar1");
-        if ((document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)) {
+        if ((document.body.scrollTop > 300 || document.documentElement.scrollTop > 300)) {
           navbar.classList.add("visible");
         } else {
           navbar.classList.remove("visible");
