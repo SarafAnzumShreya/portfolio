@@ -32,6 +32,47 @@ html{
         overflow-x: hidden;
         transition: background-image .5s ease-in-out;
     }
+    .shapes1{
+        position: absolute;
+    }
+
+    .tri{
+        position: absolute;
+        z-index: -4;
+        width: 11rem;
+        left: -50px;
+        top: -200px;
+        animation: spin 5s linear infinite;
+        opacity: 50%;
+    }
+    .cross{
+        position: absolute;
+        z-index: -4;
+        width: 11rem;
+        left: -550px;
+        top: -50px;
+        animation: smaller 2s infinite alternate;
+        transform-origin: center;
+        opacity: 50%;
+    }
+
+    .crossPink{
+        position: absolute;
+        z-index: -4;
+        width: 8rem;
+        left: 300px;
+        top: 100px;
+        animation: spinR 5s linear infinite;
+        transform-origin: center;
+        opacity: 50%;
+    }
+    @keyframes spin { 100% {transform:rotate(360deg); } }
+    @keyframes spinR { 100% {transform:rotate(-360deg); } }
+    @keyframes smaller { 
+        0% { transform: scale(1.2); }
+        50% { transform: scale(0.85); }
+        100% { transform: scale(0.6); }
+    }
 
     .navbarIcon{
         font-size:30px;
@@ -1025,6 +1066,14 @@ html{
     .navbar a:hover{
         cursor: pointer;
     }
+    .shapes1{
+        position: absolute;
+        scale: 0.9;
+        z-index: -4;
+    }
+    .cross{
+        left: -500px;
+    }
     #preloader {
         position: fixed;
         z-index:20;
@@ -1433,6 +1482,10 @@ html{
         } 
     } 
 
+    .shape1{
+        scale:0.3;
+    }
+
     h1{
         font-size: 32px;
     }
@@ -1702,6 +1755,11 @@ html{
         background-size: 80%;
         overflow-x: hidden;
         transition: background-image .5s ease-in-out;
+    }
+    .shapes1{
+        scale:0.8;
+        left: 120px;
+        top: 450px;
     }
     .navbar a{
         margin: 10px;        
@@ -2133,6 +2191,11 @@ html{
 }
 
 @media all and (max-width: 395px) {
+    .shapes1{
+        scale:0.8;
+        top: 400px;
+        left: 30px;
+    }
     #pre{
         width: 20%;
         left: 155px;
@@ -2155,7 +2218,7 @@ html{
         top: 480px; 
     }
     .bg2{
-        width: 72%;
+        width: 57%;
     }
     .bg4{
         top: 1350px;
@@ -2200,6 +2263,9 @@ html{
         width: 20%;
         top:350px;
         left: 150px;
+    }
+    .shapes1{
+        scale: 0.71;
     }
     #ball{
         width: 20%;
