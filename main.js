@@ -8,7 +8,7 @@ const noBullets = false;
 var slideTotal = slide.length - 1;
 var slideCurrent = 4;
 
-var modeToggle = document.getElementById("modeToggle");
+var modeToggle = document.getElementById("toggleWrapper");
 var modeToggleLight = document.getElementById("modeToggleLight");
 var modeToggleDark = document.getElementById("modeToggleDark");
 var sunLight = document.getElementById("sunLight");
@@ -365,10 +365,6 @@ window.addEventListener("load",function(){
 
 
     slideInitial();
-
-
-    // light mode toggle
-
-    
+ 
 
 });
