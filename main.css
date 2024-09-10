@@ -1268,8 +1268,25 @@ html{
         left: 0%;
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
-    .container {
-        height: 300px;
+    .container{
+        height: 420px;
+    }
+    .active {
+        width: 75%;
+    }
+    
+    .control_right {
+        top: 45%; /* Align control buttons vertically */
+        right: -95px;
+        width: 45%;
+    }
+    .control_left {
+        top: 45%; /* Align control buttons vertically */
+        left: -95px;
+        width: 45%;
+    }
+    .preactive, .proactive{
+        width: 50%;
     }
 
 }
@@ -1539,9 +1556,6 @@ html{
     .footer .navbar a {
         margin: 40px 10px;
         text-decoration: none;
-    }
-    container {
-        height: 200px;
     }
 
 }
@@ -1846,8 +1860,29 @@ html{
         text-decoration: none;
     }
 
-    container {
-        height: 150px;
+    .container {
+        height: 220px;
+    }
+    .preactive {
+        width: 45%;
+    }
+    
+    .active {
+        width: 70%;
+    }
+    
+    .proactive {
+        width: 45%;
+    }
+    .control_right {
+        top: 45%; /* Align control buttons vertically */
+        right: -70px;
+        width: 45%;
+    }
+    .control_left {
+        top: 45%; /* Align control buttons vertically */
+        left: -70px;
+        width: 45%;
     }
 
 }
@@ -1961,7 +1996,21 @@ html{
         font-size: 10px;
     }
     .container{
-        height: 170px;
+        height: 210px;
+    }
+    .active {
+        width: 75%;
+    }
+    
+    .control_right {
+        top: 45%; /* Align control buttons vertically */
+        right: -50px;
+        width: 45%;
+    }
+    .control_left {
+        top: 45%; /* Align control buttons vertically */
+        left: -50px;
+        width: 45%;
     }
 
     
