@@ -307,7 +307,7 @@ html{
     }
     .shop{
         z-index: 3; 
-        width: 60%;  
+        width: 80%;  
     }
 
     .bg1{
@@ -826,10 +826,7 @@ html{
         border: 3px solid white; 
         border-radius: 50%;
     }
-    .shop{
-        z-index: 3; 
-        width: 60%;  
-    }
+
 
     .bg1{
         width: 20%;
