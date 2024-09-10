@@ -40,6 +40,7 @@ html{
         z-index: 18;
         margin: 3rem;
     }
+    
     .sidenav {
         height: 100%;
         width: 0;
@@ -52,31 +53,48 @@ html{
         transition: 0.5s;
         padding-top: 6rem;
     }
-    
+    .baricons{
+        position: absolute;
+        display: inline-flex;
+        margin: 2rem 0rem 2rem 2rem; 
+        font-size: 1.3rem;
+        align-items: center;
+        bottom: 0;
+        justify-content:end;
+        text-align: center;
+    }
+    .baricons a span:hover, .icons a span :hover{
+        color: var(--Blue);
+        transition: 0.3s;
+    }
     .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #e8e8e8;
-    display: block;
-    transition: 0.3s;
-    font-size: 18px;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #e8e8e8;
+        display: block;
+        transition: 0.3s;
+        font-size: 18px;
     }
     
-    .sidenav a:hover {
-    color: var(--Blue);
+    .sidenav a:hover, .closebtn i:hover, .navbarIcon i:hover {
+        color: var(--Blue);
     }
     
     .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
     }
     .closebtn{
         cursor: pointer;
         padding-top: 2.5rem;
+    }
+
+    .closebtn i, .navbarIcon i{
+        transition: 0.3s;
     }
 
     .navbar{
@@ -88,6 +106,7 @@ html{
     }
     .navbar a:hover{
         cursor: pointer;
+        color:var(--Blue);
     }
     #preloader {
         position: fixed;
@@ -164,6 +183,11 @@ html{
         color: rgb(204, 204, 204);
         filter: drop-shadow(2px 2px 0px var(--Red));
     }
+
+    .baricons a{
+        padding: .5rem;
+    }
+
     .icons{
         display: block;
         margin-top: -10px; 
@@ -414,7 +438,7 @@ html{
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content:end; /* Centers text vertically */
+        justify-content:end; 
         align-items: center;
         padding: 20px;
         z-index: 3;
@@ -523,53 +547,52 @@ html{
         background-color: none;
     }
 
-    #modeToggleLight {
+    #toggleWrapper {
+        position: absolute;
+        top: 50px;  
+        right: 60px; 
+        z-index: 10;
+    }
+    
+    /* Keep the rest of the CSS the same */
+    #modeToggleLight, #modeToggleDark {
         width: 70px;
         height: 30px;
-        top: 50px;
-        left: 1180px;
-        position: absolute;
+        position: relative; /* Change to relative to stay within the wrapper */
         z-index: 8;
-        background: #d8d8d8;
         border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
         cursor: pointer;
         transition: 1s;
+    }
+    
+    #modeToggleLight {
+        background: #d8d8d8;
+        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
     }
     
     #modeToggleDark {
-        width: 70px;
-        height: 30px;
-        top: 50px;
-        left: 1180px;
-        position: absolute;
-        z-index: 8;
         background: #444444;
-        border-radius: 200px;
         box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        transition: 1s;
     }
     
     @keyframes circleDark {
-        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 1182px;}
-        10%  {background: linear-gradient(180deg, #777, #242424)}
-        100%  {background: linear-gradient(180deg, #777, #242424); left: 1222px}
+        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 2px;}
+        10%  {background: linear-gradient(180deg, #777, #242424);}
+        100% {background: linear-gradient(180deg, #777, #242424); left: 42px;}
     }
     
-    @keyframes circleLight{
-        0%  {background: linear-gradient(180deg, #777, #242424); left: 1222px}
-        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
-        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 1182px;}
+    @keyframes circleLight {
+        0%   {background: linear-gradient(180deg, #777, #242424); left: 42px;}
+        10%  {background: linear-gradient(180deg, #ffcc89, #d8860b);}
+        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 2px;}
     }
     
-    
-    #circle{
+    #circle {
         width: 25px;
         height: 25px;
         position: absolute;
-        top: 52.5px;
-        left:1222px;
+        top: 2.5px;
+        left: 42px;
         cursor: pointer;
         z-index: 9;
         border-radius: 50%;
@@ -577,32 +600,23 @@ html{
         background: linear-gradient(180deg, #777, #242424);
     }
     
-    
-    
     #sunLight, #sunDark, #moonLight, #moonDark {
         position: absolute;
         width: 18px;
-        top: 55px;
+        top: 5px;
         z-index: 10;
         transition: 1s;
         cursor: pointer;
     }
     
-    #sunLight {
-        left: 1185.5px;
+    #sunLight, #sunDark {
+        left: 5.5px;
     }
     
-    #sunDark {
-        left: 1185.5px;
+    #moonLight, #moonDark {
+        left: 46px;
     }
     
-    #moonLight {
-        left: 1226px;
-    }
-    
-    #moonDark {
-        left: 1226px;
-    }
     
 }
 
@@ -989,97 +1003,6 @@ html{
         width: 55%;
         background-color: none;
     }
-
-
-
-
-
-    #modeToggleLight {
-        width: 70px;
-        height: 30px;
-        top: 50px;
-        left: 1080px;
-        position: absolute;
-        z-index: 8;
-        background: #d8d8d8;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    #modeToggleDark {
-        width: 70px;
-        height: 30px;
-        top: 50px;
-        left: 1080px;
-        position: absolute;
-        z-index: 8;
-        background: #444444;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    @keyframes circleDark {
-        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 1082px;}
-        10%  {background: linear-gradient(180deg, #777, #242424)}
-        100%  {background: linear-gradient(180deg, #777, #242424); left: 1122px}
-    }
-    
-    @keyframes circleLight{
-        0%  {background: linear-gradient(180deg, #777, #242424); left: 1122px}
-        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
-        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 1082px;}
-    }
-    
-    
-    #circle{
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 52.5px;
-        left:1122px;
-        cursor: pointer;
-        z-index: 9;
-        border-radius: 50%;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(180deg, #777, #242424);
-    }
-    
-    
-    
-    #sunLight, #sunDark, #moonLight, #moonDark {
-        position: absolute;
-        width: 18px;
-        top: 55px;
-        z-index: 10;
-        transition: 1s;
-        cursor: pointer;
-    }
-    
-    #sunLight {
-        left: 1085.5px;
-    }
-    
-    #sunDark {
-        left: 1085.5px;
-    }
-    
-    #moonLight {
-        left: 1126px;
-    }
-    
-    #moonDark {
-        left: 1126px;
-    }
-    
-
-
-    
-
-
 }
 
 @media all and (max-width: 1025px) {
@@ -1464,90 +1387,6 @@ html{
     }
 
 
-
-
-
-    #modeToggleLight {
-        width: 70px;
-        height: 30px;
-        top: 50px;
-        left: 850px;
-        position: absolute;
-        z-index: 8;
-        background: #d8d8d8;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    #modeToggleDark {
-        width: 70px;
-        height: 30px;
-        top: 50px;
-        left: 850px;
-        position: absolute;
-        z-index: 8;
-        background: #444444;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    @keyframes circleDark {
-        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 852px;}
-        10%  {background: linear-gradient(180deg, #777, #242424)}
-        100%  {background: linear-gradient(180deg, #777, #242424); left: 892px}
-    }
-    
-    @keyframes circleLight{
-        0%  {background: linear-gradient(180deg, #777, #242424); left: 892px}
-        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
-        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 852px;}
-    }
-    
-    
-    #circle{
-        width: 25px;
-        height: 25px;
-        position: absolute;
-        top: 52.5px;
-        left:892px;
-        cursor: pointer;
-        z-index: 9;
-        border-radius: 50%;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(180deg, #777, #242424);
-    }
-    
-    
-    
-    #sunLight, #sunDark, #moonLight, #moonDark {
-        position: absolute;
-        width: 18px;
-        top: 55px;
-        z-index: 10;
-        transition: 1s;
-        cursor: pointer;
-    }
-    
-    #sunLight {
-        left: 855.5px;
-    }
-    
-    #sunDark {
-        left: 855.5px;
-    }
-    
-    #moonLight {
-        left: 896px;
-    }
-    
-    #moonDark {
-        left: 896px;
-    }
-
 }
 
 
@@ -1846,85 +1685,6 @@ html{
     .footer .navbar a {
         margin: 40px 10px;
         text-decoration: none;
-    }
-
-    #modeToggleLight {
-        width: 50px;
-        height: 25px;
-        top: 50px;
-        left: 620px;
-        position: absolute;
-        z-index: 8;
-        background: #d8d8d8;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    #modeToggleDark {
-        width: 50px;
-        height: 25px;
-        top: 50px;
-        left: 620px;
-        position: absolute;
-        z-index: 8;
-        background: #444444;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    @keyframes circleDark {
-        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 622px;}
-        10%  {background: linear-gradient(180deg, #777, #242424)}
-        100%  {background: linear-gradient(180deg, #777, #242424); left: 648px}
-    }
-    
-    @keyframes circleLight{
-        0%  {background: linear-gradient(180deg, #777, #242424); left: 648px}
-        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
-        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 622px;}
-    }
-    
-    
-    #circle{
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 52.5px;
-        left:648px;
-        cursor: pointer;
-        z-index: 9;
-        border-radius: 50%;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(180deg, #777, #242424);
-    }
-    
-    #sunLight, #sunDark, #moonLight, #moonDark {
-        position: absolute;
-        width: 15px;
-        top: 55px;
-        z-index: 10;
-        transition: 1s;
-        cursor: pointer;
-    }
-    
-    #sunLight {
-        left: 624.5px;
-    }
-    
-    #sunDark {
-        left: 624.5px;
-    }
-    
-    #moonLight {
-        left: 650px;
-    }
-    
-    #moonDark {
-        left: 650px;
     }
 
 }
@@ -2313,91 +2073,7 @@ html{
         left: -60px;
         width: 55%;
         background-color: none;
-    }
-
-
-
-
-    #modeToggleLight {
-        width: 50px;
-        height: 20px;
-        top: 50.5px;
-        left: 330px;
-        position: absolute;
-        z-index: 8;
-        background: #d8d8d8;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    #modeToggleDark {
-        width: 50px;
-        height: 20px;
-        top: 50.5px;
-        left: 330px;
-        position: absolute;
-        z-index: 8;
-        background: #444444;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    @keyframes circleDark {
-        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 332px;}
-        10%  {background: linear-gradient(180deg, #777, #242424)}
-        100%  {background: linear-gradient(180deg, #777, #242424); left: 362px}
-    }
-    
-    @keyframes circleLight{
-        0%  {background: linear-gradient(180deg, #777, #242424); left: 362px}
-        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
-        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 332px;}
-    }
-    
-    
-    #circle{
-        width: 16.5px;
-        height: 16.5px;
-        position: absolute;
-        left:362px;
-        cursor: pointer;
-        z-index: 9;
-        border-radius: 50%;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(180deg, #777, #242424);
-    }
-    
-    
-    
-    #sunLight, #sunDark, #moonLight, #moonDark {
-        position: absolute;
-        width: 13px;
-        top: 54px;
-        z-index: 10;
-        transition: 1s;
-        cursor: pointer;
-    }
-    
-    #sunLight {
-        left: 333.5px;
-    }
-    
-    #sunDark {
-        left: 333.5px;
-    }
-    
-    #moonLight {
-        left: 364px;
-    }
-    
-    #moonDark {
-        left: 364px;
-    }
-    
+    }   
 
 
     .footer .navbar a {
@@ -2516,86 +2192,6 @@ html{
     .container{
         height: 200px;
     }
-    
-    #modeToggleLight {
-        width: 50px;
-        height: 20px;
-        top: 50.5px;
-        left: 300px;
-        position: absolute;
-        z-index: 8;
-        background: #d8d8d8;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    #modeToggleDark {
-        width: 50px;
-        height: 20px;
-        top: 50.5px;
-        left: 300px;
-        position: absolute;
-        z-index: 8;
-        background: #444444;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    @keyframes circleDark {
-        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 302px;}
-        10%  {background: linear-gradient(180deg, #777, #242424)}
-        100%  {background: linear-gradient(180deg, #777, #242424); left: 332px}
-    }
-    
-    @keyframes circleLight{
-        0%  {background: linear-gradient(180deg, #777, #242424); left: 332px}
-        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
-        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 302px;}
-    }
-    
-    
-    #circle{
-        width: 16.5px;
-        height: 16.5px;
-        position: absolute;
-        left:332px;
-        cursor: pointer;
-        z-index: 9;
-        border-radius: 50%;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(180deg, #777, #242424);
-    }
-    
-    
-    
-    #sunLight, #sunDark, #moonLight, #moonDark {
-        position: absolute;
-        width: 13px;
-        top: 54px;
-        z-index: 10;
-        transition: 1s;
-        cursor: pointer;
-    }
-    
-    #sunLight {
-        left: 303.5px;
-    }
-    
-    #sunDark {
-        left: 303.5px;
-    }
-    
-    #moonLight {
-        left: 334px;
-    }
-    
-    #moonDark {
-        left: 334px;
-    }
    
 }
 
@@ -2661,86 +2257,6 @@ html{
     }
     .active {
         top: 97px;
-    }
-    
-    #modeToggleLight {
-        width: 50px;
-        height: 20px;
-        top: 50.5px;
-        left: 270px;
-        position: absolute;
-        z-index: 8;
-        background: #d8d8d8;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(241, 241, 241, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    #modeToggleDark {
-        width: 50px;
-        height: 20px;
-        top: 50.5px;
-        left: 270px;
-        position: absolute;
-        z-index: 8;
-        background: #444444;
-        border-radius: 200px;
-        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
-        cursor: pointer;
-        transition: 1s;
-    }
-    
-    @keyframes circleDark {
-        0%   {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 272px;}
-        10%  {background: linear-gradient(180deg, #777, #242424)}
-        100%  {background: linear-gradient(180deg, #777, #242424); left: 302px}
-    }
-    
-    @keyframes circleLight{
-        0%  {background: linear-gradient(180deg, #777, #242424); left: 302px}
-        10% {background: linear-gradient(180deg, #ffcc89, #d8860b)}
-        100% {background: linear-gradient(180deg, #ffcc89, #d8860b); left: 272px;}
-    }
-    
-    
-    #circle{
-        width: 16.5px;
-        height: 16.5px;
-        position: absolute;
-        left:302px;
-        cursor: pointer;
-        z-index: 9;
-        border-radius: 50%;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-        background: linear-gradient(180deg, #777, #242424);
-    }
-    
-    
-    
-    #sunLight, #sunDark, #moonLight, #moonDark {
-        position: absolute;
-        width: 13px;
-        top: 54px;
-        z-index: 10;
-        transition: 1s;
-        cursor: pointer;
-    }
-    
-    #sunLight {
-        left: 273.5px;
-    }
-    
-    #sunDark {
-        left: 273.5px;
-    }
-    
-    #moonLight {
-        left: 304px;
-    }
-    
-    #moonDark {
-        left: 304px;
     }
     
 }
