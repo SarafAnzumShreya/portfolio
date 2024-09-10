@@ -16,6 +16,8 @@ var sunDark = document.getElementById("sunDark");
 var moonLight = document.getElementById("moonLight");
 var moonDark = document.getElementById("moonDark");
 var circle = document.getElementById("circle");
+var open = document.getElementById("navbarIcon");
+var close = document.getElementById("closebtn");
 
 var bg1 = document.getElementsByClassName("bg1");
 var bg2 = document.getElementsByClassName("bg2");
@@ -54,6 +56,14 @@ circle.style.display = "block";
 
 window.addEventListener("load",function(){
     preloader.style.display="none";
+
+    open.addEventListener('click', () => {
+        document.getElementById("mySidenav").style.width = "250px";
+    })
+      
+    close.addEventListener('click', () => {
+        document.getElementById("mySidenav").style.width = "0px";
+    })
 
     modeToggle.addEventListener('click', () => {
         if (modeToggleLight.style.display == "none"){
