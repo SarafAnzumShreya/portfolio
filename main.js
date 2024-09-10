@@ -365,6 +365,6 @@ window.addEventListener("load",function(){
 
 
     slideInitial();
- 
+
 
 });
