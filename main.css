@@ -224,7 +224,7 @@ html{
     #mainBody{
         border: 1px solid var(--Blue);
         position: relative;
-        margin: 100px 200px;
+        margin: 100px 150px;
         padding: 50px;
         display: block;
         background-color: var(--Reda);
@@ -307,7 +307,7 @@ html{
     }
     .shop{
         z-index: 3; 
-        width: 80%;  
+        width: 90%;  
     }
 
     .bg1{
@@ -760,7 +760,7 @@ html{
     #mainBody{
         border: 1px solid var(--Blue);
         position: relative;
-        margin: 100px 200px;
+        margin: 100px 150px;
         padding: 50px;
         display: block;
         background-color: var(--Reda);
@@ -1143,7 +1143,7 @@ html{
     #mainBody{
         border: 1px solid var(--Blue);
         position: relative;
-        margin: 100px 130px;
+        margin: 100px 100px;
         padding: 50px;
         display: block;
         background-color: var(--Reda);
@@ -1211,7 +1211,7 @@ html{
     }
     .shop{
         z-index: 3; 
-        width: 60%;  
+        /* width: 60%;   */
     }
 
     .bg1{
@@ -1571,10 +1571,6 @@ html{
         border: 3px solid white; 
         border-radius: 50%;
     }
-    .shop{
-        z-index: 3; 
-        width: 60%;  
-    }
     .item{
         width: 35%;
         position: absolute;
@@ -1899,10 +1895,6 @@ html{
         border: 3px solid white; 
         border-radius: 50%;
     }
-    .shop{
-        z-index: 3; 
-        width: 60%;  
-    }
 
     .bg1{
         width: 30%;
@@ -2219,11 +2211,11 @@ html{
         font-size: 25px;
     } */
     .bg1 {
-        width: 40%;
+        width: 30%;
         top: 480px; 
     }
     .bg2{
-        width: 72%;
+        width: 55%;
     }
     .bg4{
         top: 1350px;
