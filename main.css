@@ -15,6 +15,10 @@
     --col: rgb(255, 201, 192);
 }
 
+body::-webkit-scrollbar {
+    display: none; /* For WebKit browsers like Chrome */
+}
+
 html{
     overflow-x: hidden;
 }
@@ -29,14 +33,65 @@ html{
         background-image: url("pictures/background.webp");
         background-attachment:fixed;
         background-size: 35%;
-        overflow-x: hidden;
         transition: background-image .5s ease-in-out;
     }
+
+
+    .navbar1 {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: var(--Red);
+        display: flex;
+        justify-content: space-between;
+        padding: 0; /* Remove padding to ensure full width usage */
+        opacity: 0; 
+        pointer-events: none; 
+        transition: opacity 0.5s ease, background-color 0.5s ease, color 0.5s ease; 
+        z-index: 20;
+    }
+    
+    .navbar1 a {
+        color: white;
+        padding: 0.7rem;
+        margin: 0; /* Remove margin to ensure no extra space between links */
+        text-decoration: none;
+        text-align: center;
+        flex: 1; /* Allow links to take equal width */
+    }
+    
+    /* Ensure navbar items take up the full width without extra space */
+    .navbar1 a:not(:last-child) {
+        margin-right: 0; /* Remove margin-right to avoid space between links */
+    }
+    
+    .navbar1 a:hover {
+        color: var(--Blue);
+    }
+    
+    /* Ensure .navbar1 is visible */
+    .navbar1.visible {
+        opacity: 1;
+        pointer-events: auto; 
+    }
+    
+    .navbar1.visible a {
+        color: var(--col); 
+    }
+    
+    .navbar1.visible a:hover {
+        background-color: var(--Blue);
+    }
+    .navbar1 a.active1 {
+        background-color: var(--Blue);
+    }
+
 
     .navbarIcon{
         font-size:30px;
         cursor:pointer;
         position: absolute;
+        top: 0px;  
         z-index: 18;
         margin: 3rem;
     }
@@ -1533,7 +1588,7 @@ html{
     }
     .bg1 {
         position: absolute;
-        top: 210px; 
+        top: 340px; 
         right: 0; 
         width: 20%;
         filter: drop-shadow(-5px -5px 0px var(--Red));
@@ -1768,7 +1823,7 @@ html{
 
     b, h1{
         color: var(--col);
-        font-size: 45px;
+        /* font-size: 45px; */
     }
     h2{
         color: rgb(95, 122, 173);
@@ -1861,7 +1916,7 @@ html{
         z-index: 4; 
     }
     .bg2{
-        width: 70%;
+        width:60%;
         position: absolute;
         top: 0px;
         left: 0px;
@@ -2139,6 +2194,9 @@ html{
     .footer{
         font-size: 10px;
     }
+    .navbar1{
+        font-size: 10px;
+    }
 
 }
 
@@ -2160,9 +2218,9 @@ html{
     .item{
         width: 60%;
     }
-    h1, b{
-        font-size: 35px;
-    }
+    /* h1, b{
+        font-size: 25px;
+    } */
     .bg1 {
         width: 40%;
         top: 480px; 
@@ -2205,7 +2263,8 @@ html{
     .container{
         height: 200px;
     }
-   
+
+    
 }
 
 @media  all and (max-width: 365px) {
