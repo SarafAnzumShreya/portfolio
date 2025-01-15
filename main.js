@@ -46,6 +46,9 @@ var bs = document.getElementsByTagName("b");
 var buttons = document.querySelectorAll(".skills button");
 var profile = document.getElementsByClassName("profile");
 
+const getCurrentYear = new Date().getFullYear();
+var currentYear = document.getElementById("currentYear");
+
 modeToggleLight.style.display = "none";
 modeToggleDark.style.display = "block";
 moonLight.style.display = "none";
@@ -411,5 +414,6 @@ window.addEventListener("load",function(){
 
     slideInitial();
 
+    currentYear.textContent = getCurrentYear;
 
 });
