@@ -23,7 +23,7 @@ html{
     overflow-x: hidden;
 }
 
-@media all and (max-width: 1440px) {
+@media all and (max-width: 3440px) {
     body{
         width: 100%;
         background-color: rgb(38, 38, 38);
@@ -2079,3 +2079,4 @@ html{
     }
     
 }
+
